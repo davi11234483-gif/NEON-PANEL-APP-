@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEON PANEL</title>
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:#050805;
+  color:#39ff14;
+  font-family:Arial,sans-serif;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.panel{
+  width:90%;
+  max-width:380px;
+  padding:25px;
+  border:1px solid #39ff14;
+  border-radius:18px;
+  box-shadow:0 0 25px #39ff1440;
+  text-align:center;
+}
+h1{text-shadow:0 0 12px #39ff14}
+.subtitle{color:#a8ffa0}
+button{
+  width:100%;
+  padding:14px;
+  margin-top:12px;
+  background:#102510;
+  color:#39ff14;
+  border:1px solid #39ff14;
+  border-radius:9px;
+  font-size:16px;
+}
+#status{color:#a8ffa0;margin-top:18px}
+</style>
+</head>
+<body>
+<div class="panel">
+  <h1>NEON PANEL</h1>
+  <p class="subtitle">ANDROID • GREEN NEON</p>
+  <button onclick="showStatus('Painel iniciado!')">
+    INICIAR PAINEL
+  </button>
+  <button onclick="showStatus('Configurações disponíveis em breve.')">
+    CONFIGURAÇÕES
+  </button>
+  <p id="status">Sistema pronto</p>
+</div>
+<script>
+function showStatus(message){
+  document.getElementById('status').textContent=message;
+}
+</script>
+</body>
+</html>
